@@ -26,6 +26,8 @@ def main():
     with zipfile.ZipFile(io.BytesIO(source)) as original, zipfile.ZipFile(destination, "w", compression=zipfile.ZIP_DEFLATED) as archive:
         for name in original.namelist():
             parts = Path(name).parts
+            if name.startswith("frontend/dist/"):
+                continue  # Add the current built interface once below.
             if any(part in excluded for part in parts) and not name.endswith(".gitkeep"):
                 continue
             archive.writestr(name, original.read(name))

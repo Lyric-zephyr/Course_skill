@@ -67,6 +67,9 @@ Desktop.ini
 !local_textbook/.ocr-cache/.gitkeep
 
 # Web frontend
+# Ship the small built interface so end users do not need Node.js or npm.
+!frontend/dist/
+!frontend/dist/**
 node_modules/
 frontend/test-results/
 frontend/playwright-report/

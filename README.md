@@ -23,24 +23,19 @@ You'll need:
 
 The repository doesn't include any API keys or textbooks. You bring your own.
 
-**1. Install and launch.** Open a terminal in the project folder (the one with
-`main.py`) and run:
+**1. Launch.** Download the complete project, then run `main.py` in your editor,
+or open a terminal in the project folder and run:
 
 ```sh
-python -m pip install -r requirements.txt
 python main.py
 ```
 
-If you cloned the source code instead of downloading a release, build the
-interface once first. This needs **Node.js 22+**:
-
-```sh
-npm --prefix frontend ci
-npm --prefix frontend run build
-```
-
-Your browser opens automatically. Keep the terminal open while you work, and
-press **Ctrl+C** in it to quit.
+The interface is included. On the first launch, missing Python dependencies
+are installed automatically into the project's `.venv` folder, then your
+browser opens. This initial setup needs internet access and may take a few
+minutes; later launches reuse the environment. You do not need Node.js, npm,
+or a separate frontend server to open the app. Keep the terminal open while
+you work, and press **Ctrl+C** in it to quit.
 
 **2. Choose what to make.**
 
@@ -294,9 +289,11 @@ Other launch options:
 ## For developers
 
 The interface is built with React and TypeScript in `frontend/`, and the backend
-uses FastAPI. Both run only on your own computer. After changing the frontend,
-run `npm --prefix frontend run build` and refresh the page. If a `.venv` folder
-exists, `main.py` uses it automatically.
+uses FastAPI. Both run only on your own computer. Frontend development needs
+Node.js 22+: run `npm --prefix frontend ci` once, then
+`npm --prefix frontend run build` after changing the frontend and refresh the
+page. Commit the updated `frontend/dist/` files with those changes so users
+can launch directly. If a `.venv` folder exists, `main.py` uses it automatically.
 
 The server only listens on `127.0.0.1` and requires a one-time login link, which
 is the link that opens in your browser. Don't share that link.

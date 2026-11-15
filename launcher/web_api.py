@@ -285,7 +285,7 @@ def create_app(port, token=None, manager=None, dist=None):
         if not authorized:
             raise HTTPException(401, "请使用启动器打印的地址打开工作台")
         if not (dist / "index.html").is_file():
-            return HTMLResponse("前端尚未构建。请运行 npm --prefix frontend ci 和 npm --prefix frontend run build", status_code=503)
+            return HTMLResponse("界面文件缺失，请重新下载完整项目并运行 main.py。", status_code=503)
         response = HTMLResponse((dist / "index.html").read_text(encoding="utf-8"))
         response.set_cookie("math_session", token, httponly=True, samesite="strict")
         return response
