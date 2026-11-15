@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @font-face {
   font-family: "HYGuoTuChuangXinShanHaiJing75J";
-  src: local("HYGuoTuChuangXinShanHaiJing 75J"), local("HYGuoTuChuangXinShanHaiJing75J"), local("汉仪国图创新山海经 75简");
+  src: url("./assets/fonts/HYGuoTuChuangXinShanHaiJing75J.ttf") format("truetype"), local("HYGuoTuChuangXinShanHaiJing 75J"), local("HYGuoTuChuangXinShanHaiJing75J"), local("汉仪国图创新山海经 75简");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

@@ -212,6 +212,9 @@ python skills/Common/scripts/extract_pdf.py "textbook.pdf" --refresh --output te
 
 | Problem | Try this |
 | --- | --- |
+| The page cannot connect to the local service | Keep `main.py` running and use the new page it opens. Brief connection failures retry automatically; use **重新连接** (reconnect) after restoring the service. Let `127.0.0.1` bypass your proxy |
+| Startup reports missing interface resources or fonts | Download the complete updated project, including `frontend/dist/assets/` |
+| Automatic dependency installation fails | Check the terminal output, internet connection, and write permission for the project folder, then run `main.py` again |
 | Something says a tool is missing | Choose your AI and output format, then click **一键配置环境** |
 | Codex CLI isn't logged in | Run `codex login`, then run setup again |
 | No models show up | Check your key and provider. You can also type the model ID by hand |

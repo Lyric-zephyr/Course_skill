@@ -147,7 +147,7 @@ export default function App() {
     try { const result = await api<{path: string}>(path, body); setOpenedPath(result.path) }
     catch (e) { setError((e as Error).message) }
   }
-  if (!settings || !options) return <main className="mx-auto max-w-3xl p-12"><h1 className="text-2xl font-semibold">Course_Skill 课程复习工作台</h1><p className="mt-6" role="status">{error || '正在连接本机服务…'}</p></main>
+  if (!settings || !options) return <main className="mx-auto max-w-3xl p-12"><h1 className="text-2xl font-semibold">Course_Skill 课程复习工作台</h1><p className="mt-6" role="status">{error || '正在连接本机服务…'}</p>{error && <Button variant="outline" className="mt-4" onClick={() => window.location.reload()}>重新连接</Button>}</main>
   const practice = settings.mode === '练习'
   const competition = settings.subject === options.defaults.subject
   const modules = options.subject_modules[settings.subject]

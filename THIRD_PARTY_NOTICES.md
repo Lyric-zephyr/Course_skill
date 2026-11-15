@@ -25,6 +25,22 @@ file when redistributing frontend builds. Build/test tools retain their own
 package license terms. FastAPI, Uvicorn and psutil are separately installed
 Python dependencies under their respective MIT/BSD licenses.
 
+## Interface font
+
+The frontend bundles the maintainer-provided **HYGuoTuChuangXinShanHaiJing 75J**
+(汉仪国图创新山海经 75简) font, loaded from the app so users do not need to install it.
+The original font is kept at
+`frontend/src/assets/fonts/HYGuoTuChuangXinShanHaiJing75J.ttf`; frontend builds
+include a copy under `frontend/dist/assets/`.
+
+Copyright (C) 2025 Beijing Hanyi Innovation Technology Co.,Ltd.
+This font is proprietary and is **not** covered by the project's MIT License.
+Its embedded license notice directs users to
+[Hanyi's license terms](http://hanyi.com.cn/law.php). Web embedding and
+redistribution require the corresponding permission from the rights holder;
+this project does not grant any additional font rights. Retain this notice
+when distributing the interface.
+
 ## Externally hosted reference selections
 
 | Collection | Material in Assistant_course | Applicable license |
